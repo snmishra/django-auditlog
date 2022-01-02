@@ -14,7 +14,10 @@ from django.utils.encoding import smart_str
 
 from django.utils.translation import gettext_lazy as _
 
-from jsonfield.fields import JSONField
+try:
+    from django.db.models import JSONField
+except ImportError:
+    from django.contrib.postgres.fields import JSONField
 
 
 class LogEntryManager(models.Manager):
