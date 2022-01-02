@@ -9,7 +9,7 @@ except ImportError:
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("auditlog", "0007_object_pk_type.py"),
+        ("auditlog", "0007_object_pk_type"),
     ]
 
     operations = [
